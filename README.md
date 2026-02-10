@@ -4,10 +4,10 @@ Ping pong eseményszervező oldal
 
 
 Eseménylista oldal (tartalmi oldal) - Fóti Dávid drótváz:
-![Logo](Drótváz.png)
+![Logo](Readme_kepek/Drótváz.png)
 
 Eseményjelentkezési oldal (űrlap) - Medgyaszay Gergő drótváz:
-![Logo](Drótváz_G.png)
+![Logo](Readme_kepek/Drótváz_G.png)
 
 index.html - Fóti Dávid
 
