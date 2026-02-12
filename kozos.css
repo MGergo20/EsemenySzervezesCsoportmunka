@@ -1,10 +1,23 @@
-header{
-    display: flex;
-    justify-content: center;
-    flex: 0 0 100%;
+* {
+    box-sizing: border-box;
 }
-nav{
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+header,
+nav {
     display: flex;
     justify-content: center;
     flex: 0 0 100%;
+
+}
+
+footer {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    flex: 0 0 100%;
+    order: 10;
 }
