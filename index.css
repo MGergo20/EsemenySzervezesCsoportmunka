@@ -1,0 +1,22 @@
+article {
+    display: flex;
+    justify-content: left;
+    flex: 0 0 100%;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: black;
+    border: 3px solid black;
+    border-radius: 5px;
+    gap: 10px;
+}
+nav ul a:hover {
+    color:red;
+   
+}
+
+nav {
+
+    flex: 1 1 50%;
+}
