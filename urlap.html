@@ -102,32 +102,34 @@
           </div>
           <label>Tájékoztató:</label>
           <div>
-            <input type="checkbox" name="adatvedelem" id="adatvedelem" required /> Elfogadom az
-            <a href="#">adatvédelmi tájékoztatót</a>.
+            <label for="adatvedelem">
+              <input type="checkbox" name="adatvedelem" id="adatvedelem" required />
+              Elfogadom az <a href="https://slepyyz.github.io/csapatmunka-esemeny/">adatvédelmi tájékoztatót</a>.
+            </label>
           </div>
         </fieldset>
-        <input type="submit" value="Küldés">
+        <input type="submit" value="Küldés" >
       </form>
     </article>
     <aside>
       <ul>
-        <li><a href="#szemelyes">Személyes</a></li>
+        <li class="cim"><a href="#szemelyes">Személyes</a></li>
         <ol>
-          <li><a href="#fnev">Felhasználónév</a></li>
-          <li><a href="#email">E-mail cím</a></li>
+          <li class="alcim"><a href="#fnev">Felhasználónév</a></li>
+          <li class="alcim"><a href="#email">E-mail cím</a></li>
         </ol>
-        <li><a href="#esemenyek">Események kiválasztása</a></li>
+        <li class="cim"><a href="#esemenyek">Események kiválasztása</a></li>
         <ol>
-          <li><a href="#jovohet">Melyik esemény</a></li>
-          <li><a href="#datumok">Dátum</a></li>
-          <li><a href="#idopontok">Időpontok</a></li>
-          <li><a href="#fo">Hány fő</a></li>
-          <li><a href="#szint">Tapasztalati szint</a></li>
+          <li class="alcim"><a href="#jovohet">Melyik esemény</a></li>
+          <li class="alcim"><a href="#datumok">Dátum</a></li>
+          <li class="alcim"><a href="#idopontok">Időpontok</a></li>
+          <li class="alcim"><a href="#fo">Hány fő</a></li>
+          <li class="alcim"><a href="#szint">Tapasztalati szint</a></li>
         </ol>
-        <li><a href="#igenyek">Igények</a></li>
+        <li class="cim"><a href="#igenyek">Igények</a></li>
         <ol>
-          <li><a href="#igenyek">Igények</a></li>
-          <li><a href="#adatvedelem">adatvédelmi tájékoztató</a></li>
+          <li class="alcim"><a href="#igenyekmegjegyzes">Igények</a></li>
+          <li class="alcim"><a href="#adatvedelem">adatvédelmi tájékoztató</a></li>
         </ol>
       </ul>
     </aside>
