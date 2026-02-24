@@ -6,18 +6,38 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
-header,
-nav {
-    display: flex;
-    justify-content: center;
-    flex: 0 0 100%;
 
+header,
+nav,
+footer {
+  flex: 1 1 100%;
+  background-color: #1f2937;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
 }
 
-footer {
-    display: flex;
-    padding: 15px;
-    justify-content: center;
-    flex: 0 0 100%;
-    order: 10;
+header h1 {
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  color: #f3f4f6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f97316;
 }
