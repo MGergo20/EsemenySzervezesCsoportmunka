@@ -19,9 +19,6 @@ main {
   max-width: 1100px;
   margin: 0 auto;
 }
-
-
-
 article {
   flex: 2 1 600px;
   background-color: #1f2937;
@@ -29,7 +26,6 @@ article {
   border-radius: 50px;
   border-left: 6px solid #3b82f6;
 }
-
 aside {
   flex: 1 1 300px;
   background-color: #1f2937;

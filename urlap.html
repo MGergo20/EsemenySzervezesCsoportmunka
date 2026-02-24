@@ -1,149 +1,148 @@
 <!doctype html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="urlap.css">
-    <link rel="stylesheet" href="kozos.css">
-    <title>Űrlap</title>
-  </head>
 
-  <body>
-    <main>
-      <header>
-        <h1>Ping-pong verseny jelentkezési lapja</h1>
-      </header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Kezdőoldal</a></li>
-          <li><a href="urlap.html">Jelentkezési lap</a></li>
-        </ul>
-      </nav>
-      <article>
-        <form action="feldolgoz.php" method="post">
-          <fieldset>
-            <legend>Személyes</legend>
-            <div>
-              <label for="fnev">Felhasználónév</label>
-              <input
-                type="text"
-                name="fnev"
-                id="fnev"
-                placeholder="csak ékezetmentes betűk"
-                required
-                maxlength="50"
-              />
-            </div>
-            <div>
-              <label for="email">E-mail cím</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="valaki@valaki.hu"
-                required
-                maxlength="100"
-              />
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Eseményre való regisztráció</legend>
-            <div>
-              <label for="jovohet">Melyik eseményre?</label>
-              <select name="esemeny" id="jovohet" required>
-                <option value="">Válasszon időpontot</option>
-                <option value="1">Hétfő</option>
-                <option value="2">Kedd</option>
-                <option value="3">Szerda</option>
-                <option value="4">Csütörtök</option>
-                <option value="5">Péntek</option>
-                <option value="6">Szombat</option>
-                <option value="7">Vasárnap</option>
-              </select>
-            </div>
-            <div>
-              <label for="datumok">Dátum</label>
-              <select name="datum" id="datumok">
-                <option value="">Válasszon időpontot</option>
-                <option value="1">2026.02.16.</option>
-                <option value="2">2026.02.17.</option>
-                <option value="3">2026.02.18.</option>
-                <option value="4">2026.02.19.</option>
-                <option value="5">2026.02.20.</option>
-                <option value="6">2026.02.21.</option>
-                <option value="7">2026.02.22.</option>
-              </select>
-            </div>
-            <div>
-              <label for="idopontok">Időpontok</label>
-              <select name="idopont" id="idopontok">
-                <option value="">Válasszon időpontot</option>
-                <option value="1">8:00</option>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="kozos.css">
+  <link rel="stylesheet" href="urlap.css">
 
-                <option value="2">13:00</option>
+  <title>Űrlap</title>
+</head>
 
-                <option value="3">16:00</option>
-
-                <option value="4">19:00</option>
-
-                <option value="5">9:00</option>
-
-                <option value="6">12:00</option>
-
-                <option value="7">15:00</option>
-              </select>
-            </div>
-            <div>
-              <label for="fo">Hány fő jelentkezik?</label>
-              <input
-                type="number"
-                name="fo"
-                id="fo"
-                required
-                min="1"
-                max="10"
-              />
-            </div>
-            <label for="szint">Tapasztalati szint</label>
-            <select name="szint" id="szint" required>
-              <option value="">Válasszon szintet</option>
-              <option value="kezdo">Kezdő</option>
-              <option value="halado">Haladó</option>
-              <option value="profi">Profi</option>
+<body>
+  <main>
+    <header>
+      <h1>Ping-pong verseny jelentkezési lapja</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Kezdőoldal</a></li>
+        <li><a href="urlap.html">Jelentkezési lap</a></li>
+      </ul>
+    </nav>
+    <article>
+      <form action="feldolgoz.php" method="post">
+        <fieldset>
+          <legend id="szemelyes">Személyes</legend>
+          <div>
+            <label for="fnev">Felhasználónév</label>
+            <input type="text" name="fnev" id="fnev" placeholder="csak ékezetmentes betűk" required maxlength="50" />
+          </div>
+          <div>
+            <label for="email">E-mail cím</label>
+            <input type="email" name="email" id="email" placeholder="valaki@valaki.hu" required maxlength="100" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend id="esemenyek">Eseményre való regisztráció</legend>
+          <div>
+            <label for="jovohet">Melyik eseményre?</label>
+            <select name="esemeny" id="jovohet" required>
+              <option value="">Válasszon időpontot</option>
+              <option value="1">Hétfő</option>
+              <option value="2">Kedd</option>
+              <option value="3">Szerda</option>
+              <option value="4">Csütörtök</option>
+              <option value="5">Péntek</option>
+              <option value="6">Szombat</option>
+              <option value="7">Vasárnap</option>
             </select>
-          </fieldset>
-          <fieldset>
-            <legend>Megjegyzés / Különleges igények</legend>
-            <label for="megjegyzes"></label>
-            <div>
-              <textarea
-                name="megjegyzes"
-                id="megjegyzes"
-                rows="3"
-                placeholder="Pl. étkezési igény, egészségügyi információ"
-              ></textarea>
-            </div>
-            <label>Tájékoztató:</label>
-            <div>
-              <input type="checkbox" name="adatvedelem" required /> Elfogadom az
-              <a href="#">adatvédelmi tájékoztatót</a>.
-            </div>
-          </fieldset>
-          <input type="submit" value="Küldés">
-        </form>
-      </article>
-      <aside>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsa magnam ullam enim vitae neque, provident quas inventore, error ab perspiciatis nemo animi delectus repudiandae natus labore. Unde, nobis nulla!</aside>
-      <footer>&copy; Fóti Dávid - Medgyaszay Gergő - Csillag Gergő Zsolt</footer>
-    </main>
-    <script>
-      const esemenySelect = document.getElementById("jovohet");
-      const datumSelect = document.getElementById("datumok");
-      const idopontSelect = document.getElementById("idopontok");
+          </div>
+          <div>
+            <label for="datumok">Dátum</label>
+            <select name="datum" id="datumok">
+              <option value="">Válasszon időpontot</option>
+              <option value="1">2026.02.16.</option>
+              <option value="2">2026.02.17.</option>
+              <option value="3">2026.02.18.</option>
+              <option value="4">2026.02.19.</option>
+              <option value="5">2026.02.20.</option>
+              <option value="6">2026.02.21.</option>
+              <option value="7">2026.02.22.</option>
+            </select>
+          </div>
+          <div>
+            <label for="idopontok">Időpontok</label>
+            <select name="idopont" id="idopontok">
+              <option value="">Válasszon időpontot</option>
+              <option value="1">8:00</option>
 
-      esemenySelect.addEventListener("change", function () {
-        datumSelect.value = this.value;
-        idopontSelect.value = this.value;
-      });
-    </script>
-  </body>
+              <option value="2">13:00</option>
+
+              <option value="3">16:00</option>
+
+              <option value="4">19:00</option>
+
+              <option value="5">9:00</option>
+
+              <option value="6">12:00</option>
+
+              <option value="7">15:00</option>
+            </select>
+          </div>
+          <div>
+            <label for="fo">Hány fő jelentkezik?</label>
+            <input type="number" name="fo" id="fo" required min="1" max="10" />
+          </div>
+          <label for="szint">Tapasztalati szint</label>
+          <select name="szint" id="szint" required>
+            <option value="">Válasszon szintet</option>
+            <option value="kezdo">Kezdő</option>
+            <option value="halado">Haladó</option>
+            <option value="profi">Profi</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend id="igenyek">Megjegyzés / Különleges igények</legend>
+          <label for="megjegyzes"></label>
+          <div>
+            <textarea name="megjegyzes" id="megjegyzes" rows="3"
+              placeholder="Pl. étkezési igény, egészségügyi információ"></textarea>
+          </div>
+          <label>Tájékoztató:</label>
+          <div>
+            <input type="checkbox" name="adatvedelem" id="adatvedelem" required /> Elfogadom az
+            <a href="#">adatvédelmi tájékoztatót</a>.
+          </div>
+        </fieldset>
+        <input type="submit" value="Küldés">
+      </form>
+    </article>
+    <aside>
+      <ul>
+        <li><a href="#szemelyes">Személyes</a></li>
+        <ol>
+          <li><a href="#fnev">Felhasználónév</a></li>
+          <li><a href="#email">E-mail cím</a></li>
+        </ol>
+        <li><a href="#esemenyek">Események kiválasztása</a></li>
+        <ol>
+          <li><a href="#jovohet">Melyik esemény</a></li>
+          <li><a href="#datumok">Dátum</a></li>
+          <li><a href="#idopontok">Időpontok</a></li>
+          <li><a href="#fo">Hány fő</a></li>
+          <li><a href="#szint">Tapasztalati szint</a></li>
+        </ol>
+        <li><a href="#igenyek">Igények</a></li>
+        <ol>
+          <li><a href="#igenyek">Igények</a></li>
+          <li><a href="#adatvedelem">adatvédelmi tájékoztató</a></li>
+        </ol>
+      </ul>
+    </aside>
+  </main>
+  <footer>&copy; Fóti Dávid - Medgyaszay Gergő - Csillag Gergő Zsolt</footer>
+  <script>
+    const esemenySelect = document.getElementById("jovohet");
+    const datumSelect = document.getElementById("datumok");
+    const idopontSelect = document.getElementById("idopontok");
+
+    esemenySelect.addEventListener("change", function () {
+      datumSelect.value = this.value;
+      idopontSelect.value = this.value;
+    });
+  </script>
+</body>
+
 </html>
