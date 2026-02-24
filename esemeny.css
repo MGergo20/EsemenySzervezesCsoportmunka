@@ -55,10 +55,7 @@ aside li {
   border-radius: 10px;
 }
 
-footer {
-  font-size: 0.85em;
-  color: #9ca3af;
-}
+
 
 @media (max-width: 800px) {
   article,
