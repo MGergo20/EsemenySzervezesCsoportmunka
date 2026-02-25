@@ -37,6 +37,7 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 25px;
+  
 }
 
 nav a {
@@ -44,10 +45,13 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
 }
 
 nav a:hover {
   color: #f97316;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 footer {
   font-size: 0.85em;
